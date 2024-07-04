@@ -1,7 +1,7 @@
 <?php
 /*
-Plugin Name: Qwel Assets Beta
-Description: This is an asset when using the theme "Qwel".
+Plugin Name: Beyond Customize
+Description: This is an asset when using the theme "Beyond" for Active Eyes Detective Agency.
 Version: 1.0
 Requires PHP: 7.4
 Author: Taigo Ito
@@ -17,8 +17,8 @@ defined( 'ABSPATH' ) || exit;
 /*
  * プラグインのパス, URI
  */
-define( 'QWEL_ASSETS_DIR', WP_PLUGIN_DIR . '/qwel-assets/' );
-define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
+define( 'BEYOND_CUSTOMIZE_DIR', WP_PLUGIN_DIR . '/beyond-customize/' );
+define( 'BEYOND_CUSTOMIZE_URI', WP_PLUGIN_URL . '/beyond-customize/' );
 
 
 /*
@@ -26,23 +26,20 @@ define( 'QWEL_ASSETS_URI', WP_PLUGIN_URL . '/qwel-assets/' );
  */
 spl_autoload_register(
 	function( $classname ) {
-		if ( strpos( $classname, 'Qwel_Assets' ) === false ) return;
+		if ( strpos( $classname, 'Beyond_Customize' ) === false ) return;
 		$classname = str_replace( '\\', '/', $classname );
-		$classname = str_replace( 'Qwel_Assets/', '', $classname );
-		$file      = QWEL_ASSETS_DIR . '/classes/' . $classname . '.php';
+		$classname = str_replace( 'Beyond_Customize/', '', $classname );
+		$file      = BEYOND_CUSTOMIZE_DIR . '/classes/' . $classname . '.php';
 		if ( file_exists( $file ) ) {
 			require $file;
 		}
 	}
 );
 
-class Qwel_Assets {
-  use \Qwel_Assets\Shortcodes;
+class Beyond_Customize {
+  use \Beyond_Customize\Shortcodes;
 		
 	public function __construct() {
-    // ブロックスタイルを追加 (エディター)
-    add_action( 'enqueue_block_editor_assets', [ $this, 'add_block_styles' ] );
-
     // CSSファイルを読み込み (エディター)
     add_action( 'enqueue_block_assets', [ $this, 'enqueue_scripts' ] );
 
@@ -54,23 +51,13 @@ class Qwel_Assets {
 
 	}
 
-  public function add_block_styles() {
-    // blockStyles.js
-    wp_enqueue_script(
-      'qwel-block-styles',
-      plugins_url( 'blockStyles.js', __FILE__ ),
-      [ 'wp-blocks' ]
-    );
-
-  }
-
   public function enqueue_scripts() {
     // バージョン情報
     $version = '1.0';
 
 		// style.css
 		wp_enqueue_style(
-			'qwel-style',
+			'beyond-custom-style',
 			plugins_url( 'style.css', __FILE__ ),
 			[],
       $version
@@ -79,7 +66,7 @@ class Qwel_Assets {
     // init.js (フロントエンドのみ)
     if ( !is_admin() ) {
       wp_enqueue_script(
-        'qwel-init',
+        'beyond-custom-init',
         plugins_url( 'init.js', __FILE__ ),
         [],
         $version,
@@ -91,4 +78,4 @@ class Qwel_Assets {
 
 }
 
-new Qwel_Assets();
+new Beyond_Customize();
