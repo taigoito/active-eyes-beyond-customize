@@ -1,0 +1,158 @@
+/**
+ * Project
+ */
+
+#c-reason.c-reason {
+  width: min(100%, 864px);
+  margin-left: auto;
+  margin-right: auto;
+
+  .c-reason {
+    &__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-radius: 6px;
+    }
+
+    &__item {
+      padding: 0.75em; // em指定
+      border-top: 1px solid #dbdbdb;
+      background-color: #f6f6f6;
+      font-weight: 700;
+      font-size: 0.875rem; // iPhoneSEで収まるサイズ
+
+      @media (min-width: $breakpointSm) {
+        font-size: min(2.88vw, 28px); // 600px時収まるサイズ
+      }
+
+      strong {
+        display: none;
+        color: $themeColor;
+
+        @media (min-width: $breakpointSm) {
+          display: inline;
+        }
+      }
+
+      em {
+        padding: 0 0.375em; // em指定
+        color: $themeColor;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.5em; // em指定
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+#c-plan.c-plan {
+  width: min(100%, 960px);
+  margin-left: auto;
+  margin-right: auto;
+
+  .c-plan {
+    &__list {
+      list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: flex-start; // 上端揃え
+      gap: 24px;
+      margin: 0;
+      padding: 0;
+    }
+
+    &__item {
+      flex: 0 1 288px; // 伸長しない
+    }
+  }
+}
+
+#c-aboutUs.c-aboutUs {
+  position: relative;
+  width: min(100%, 960px);
+  margin-left: auto;
+  margin-right: auto;
+
+  .c-aboutUs {
+    &__inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &__image {
+      flex: 0 1 432px; // 伸長しない
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__content {
+      flex: 0 1 432px; // 伸長しない
+      text-align: justify;
+
+      strong {
+        color: $themeColor;
+      }
+    }
+
+    &__cover {
+      position: absolute;
+      top: 150px;
+      right: -150px;
+      z-index: 1;
+      width: 330px; // Aspect Ratio = 5 : 6
+      height: 396px;
+      background: url("/data/uploads/2024/07/logo_l.png") no-repeat center center / contain scroll;
+      opacity: 0.15;
+
+      @media (min-width: $breakpointSm) {
+        top: -180px;
+        right: -180px;
+        width: 396px;
+        height: 475px;
+      }
+    }
+  }
+}
+
+#c-bannerArea.c-bannerArea {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 24px;
+  width: min(100%, 960px);
+  margin-left: auto;
+  margin-right: auto;
+
+  .c-bannerArea {
+    &__banner {
+      position: relative;
+      flex: 0 1 432px; // 伸長しない
+
+      figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 1em;
+        margin: auto;
+        color: #ffffff;
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+  }
+}

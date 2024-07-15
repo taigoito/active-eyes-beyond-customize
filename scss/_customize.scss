@@ -1,0 +1,38 @@
+/**
+ * Customize
+ */
+
+#index_header_content .catch {
+  color: #000;
+  text-shadow: 2px 2px 6px #fff, -2px 2px 6px #fff, 2px -2px 6px #fff, -2px -2px 6px #fff;
+}
+
+.link_button {
+  margin-top: 65px;
+  text-align: center;
+
+  .design_button {
+    color: #ffffff;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+#cb_content_8.cb_free_space.num8 {
+  background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat center center / cover scroll;
+
+  .catch.common_catch {
+    color: #ffffff;
+  }
+
+  .post_content {
+    width: min(83.33%, 648px);
+    margin: 0 auto;
+
+    p {
+      color: #ffffff;
+    }
+  }
+}
