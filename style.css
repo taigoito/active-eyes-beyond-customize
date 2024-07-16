@@ -31,6 +31,24 @@
   color: #ffffff;
 }
 
+.service_design_content ul {
+  list-style: none;
+  margin-left: 40px;
+}
+.service_design_content ul li {
+  position: relative;
+}
+.service_design_content ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center/contain scroll;
+}
+
 /**
  * Icon
  */
