@@ -37,6 +37,43 @@
   }
 }
 
+#footer_box_content {
+  .item:nth-child(3) {
+    .design_button {
+      background-color: #00b900;
+
+      &::before {
+        background-color: #00dc00;
+      }
+    }
+  }
+
+  .c-item {
+    .headline {
+      margin: 0;
+    }
+
+    .c-tel {
+      margin: 0;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 1.5;
+
+      a {
+        color: $themeColor;
+      }
+    }
+  }
+}
+
+#service_page_header .title {
+  background-color: rgba($themeColor, .5) !important;
+}
+
+.service_design_content .headline {
+  color: #ffffff !important;
+}
+
 .service_design_content ul {
   list-style: none;
   margin-left: 40px; // チェックアイコン
@@ -54,5 +91,17 @@
       height: 24px;
       background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center / contain scroll;
     }
+  }
+}
+
+.c-table {
+  th, td {
+    border-left: none;
+    border-right: none;
+    vertical-align: middle;
+  }
+
+  td:first-child {
+    color: $themeColor;
   }
 }
