@@ -70,38 +70,62 @@
   background-color: rgba($themeColor, .5) !important;
 }
 
-.service_design_content .headline {
-  color: #ffffff !important;
-}
+.post_content {
+  .service_design_content .headline {
+    color: #ffffff !important;
+  }
 
-.service_design_content ul {
-  list-style: none;
-  margin-left: 40px; // チェックアイコン
+  .service_design_content ul {
+    list-style: none;
+    margin-left: 40px; // チェックアイコン
 
-  li {
-    position: relative;
+    li {
+      position: relative;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -32px;
-      display: block;
-      width: 24px;
-      height: 24px;
-      background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center / contain scroll;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -32px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center / contain scroll;
+      }
     }
   }
-}
 
-.c-table {
-  th, td {
-    border-left: none;
-    border-right: none;
-    vertical-align: middle;
+  .c-table {
+    th, td {
+      border-left: none;
+      border-right: none;
+      vertical-align: middle;
+    }
+
+    td:first-child {
+      color: $themeColor;
+    }
   }
 
-  td:first-child {
-    color: $themeColor;
+  .c-featuresHeadline1 {
+    margin-top: 4rem;
+    margin-bottom: 0;
+
+    em {
+      margin-left: 9px;
+      font-style: normal;
+      font-size: 1.5em;
+      vertical-align: middle;
+    }
+  }
+
+  .c-featuresHeadline2 {
+    margin-top: 0;
+  }
+
+  .wp-block-button {
+    .wp-block-button__link {
+      width: 324px;
+    }
   }
 }
