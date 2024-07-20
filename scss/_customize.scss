@@ -56,7 +56,7 @@
     .c-tel {
       margin: 0;
       font-weight: 700;
-      font-size: 42px;
+      font-size: 36px;
       line-height: 1.5;
 
       a {
@@ -75,7 +75,8 @@
     color: #ffffff !important;
   }
 
-  .service_design_content ul {
+  .service_design_content ul,
+  .c-designList {
     list-style: none;
     margin-left: 40px; // チェックアイコン
 
@@ -99,12 +100,24 @@
     th, td {
       border-left: none;
       border-right: none;
+      border-color: #d0d0d0;
+      background-color: transparent;
       vertical-align: middle;
     }
 
     td:first-child {
+      border-color: #d0d0d0;
       color: $themeColor;
     }
+  }
+
+  .c-sectionHeadline::after {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 6px;
+    margin: 12px auto;
+    background-color: $themeColor;
   }
 
   .c-featuresHeadline1 {
@@ -126,6 +139,43 @@
   .wp-block-button {
     .wp-block-button__link {
       width: 324px;
+    }
+  }
+}
+
+// 料金プランページ
+.page-id-62 #container {
+  background-color: $themeColorLight;
+
+  .service_design_content {
+    position: relative;
+    overflow: visible;
+    
+    .headline {
+      border-radius: 12px 12px 0 0;
+      background-color: $themeColor;
+      color: #ffffff;
+
+      @media (max-width: 750px) {
+        padding-left: 36px !important;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: -6px;
+      width: 72px;
+      height: 72px;
+      background: url("/data/plugins/beyond-customize/assets/label_campaign.png") no-repeat 0% 0% /contain scroll;
+
+      @media (min-width: 900px) {
+        left: 108px;
+        top: -18px;
+        width: 108px;
+        height: 108px;
+      }
     }
   }
 }

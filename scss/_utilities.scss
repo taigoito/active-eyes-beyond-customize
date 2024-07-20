@@ -1,0 +1,37 @@
+/**
+ * Utilities
+ */
+
+@for $i from 1 to 10 {
+  .c-w_#{$i} {
+    width: min(100%, #{72px * $i}) !important;
+    margin: 0 auto;
+  }
+}
+
+$spacingProps: (
+  m:   "margin",
+  mt:  "margin-top",
+  ml:  "margin-left",
+  mr:  "margin-right",
+  mb:  "margin-bottom",
+  p:   "padding",
+  pt:  "padding-top",
+  pl:  "padding-left",
+  pr:  "padding-right",
+  pb:  "padding-bottom",
+);
+
+@each $prefix, $prop in $spacingProps {
+  @for $i from 0 to 4 {
+    .c-#{$prefix}_#{$i} {
+      #{$prop}: #{12px * $i} !important;
+    }
+  }
+}
+
+@for $i from 1 to 4 {
+  .c-rounded_#{$i} {
+    border-radius: #{3px * $i} !important;
+  }
+}
