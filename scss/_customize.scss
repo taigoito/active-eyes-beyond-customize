@@ -71,6 +71,14 @@
 }
 
 .post_content {
+  p a {
+    color: $themeColor;
+
+    &:hover {
+      color: $themeColorMedium;
+    }
+  }
+
   .service_design_content .headline {
     color: #ffffff !important;
   }
@@ -138,7 +146,7 @@
 
   .wp-block-button {
     .wp-block-button__link {
-      width: 324px;
+      width: 100%;
     }
   }
 }

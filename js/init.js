@@ -5,6 +5,10 @@
  * @package beyond-customize
  */
 
+// Accordion
+import Accordion from './_accordion.js';
+new Accordion();
+
 // Book
 import Book from './_book.js';
 new Book();

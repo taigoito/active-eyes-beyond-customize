@@ -2,6 +2,17 @@
  * Utilities
  */
 
+$displayValues: (
+  block: block,
+  inline-block: inline-block
+);
+
+@each $display, $value in $displayValues {
+  .c-#{$display} {
+    display: $value;
+  }
+}
+
 @for $i from 1 to 10 {
   .c-w_#{$i} {
     width: min(100%, #{72px * $i}) !important;
@@ -19,7 +30,7 @@ $spacingProps: (
   pt:  "padding-top",
   pl:  "padding-left",
   pr:  "padding-right",
-  pb:  "padding-bottom",
+  pb:  "padding-bottom"
 );
 
 @each $prefix, $prop in $spacingProps {

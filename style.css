@@ -54,6 +54,12 @@
   background-color: rgba(244, 65, 201, 0.5) !important;
 }
 
+.post_content p a {
+  color: #f441c9;
+}
+.post_content p a:hover {
+  color: #f892e0;
+}
 .post_content .service_design_content .headline {
   color: #ffffff !important;
 }
@@ -110,7 +116,7 @@
   margin-top: 0;
 }
 .post_content .wp-block-button .wp-block-button__link {
-  width: 324px;
+  width: 100%;
 }
 
 .page-id-62 #container {
@@ -319,9 +325,97 @@
   text-align: center;
 }
 
+#c-step {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+#c-step .c-step {
+  position: relative;
+  width: min(87.5%, 630px);
+  margin-left: 12.5%;
+  padding-left: 18.75%;
+  padding-right: 6.25%;
+  padding-bottom: 36px;
+  border-left: 1px dashed #f441c9;
+  text-align: justify;
+}
+#c-step .c-step:last-child {
+  border-left: none;
+}
+#c-step .c-step__image {
+  position: absolute;
+  top: 0;
+  right: calc(100% - min(12.5%, 60px));
+  width: min(25%, 120px);
+}
+#c-step .c-step__image img {
+  width: 100%;
+}
+
+#c-notes.c-notes {
+  list-style: none;
+  margin-left: auto;
+}
+#c-notes.c-notes .c-notes li::first-letter {
+  color: #f441c9;
+}
+
+#c-faq.c-faq {
+  width: min(100%, 720px);
+  margin: 0 auto;
+}
+#c-faq.c-faq .c-faq__dt {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+#c-faq.c-faq .c-faq__dd {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 6px;
+  background-color: #f6f6f6;
+}
+#c-faq.c-faq [data-toggle=panel]::after {
+  content: "+";
+  float: right;
+  margin-right: 6px;
+}
+#c-faq.c-faq [data-toggle=panel].--active::after {
+  content: "-";
+}
+#c-faq.c-faq .panel.--collapse {
+  display: none;
+}
+
+#c-sitemap.c-sitemap {
+  display: flex;
+  flex-flow: row wrap;
+}
+#c-sitemap.c-sitemap .c-sitemap__contentBox {
+  flex: 1 1 240px;
+}
+#c-sitemap.c-sitemap h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+#c-sitemap.c-sitemap ul {
+  list-style-type: "- ";
+}
+
 /**
  * Utilities
  */
+.c-block {
+  display: block;
+}
+
+.c-inline-block {
+  display: inline-block;
+}
+
 .c-w_1 {
   width: min(100%, 72px) !important;
   margin: 0 auto;
