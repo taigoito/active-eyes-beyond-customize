@@ -903,3 +903,50 @@
     right: 27.5vw;
   }
 }
+
+/**
+ * Photos
+ */
+.photo {
+  position: relative;
+  overflow: hidden;
+}
+.photo__image {
+  display: block;
+  width: 432px;
+  height: auto;
+  transition: transform 0.35s, filter 0.35s;
+  filter: blur(1px) brightness(0.85);
+}
+.photo:hover .photo__image {
+  transform: scale(1.2);
+  filter: brightness(1);
+}
+.photo__focusFrame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20%;
+  height: 20%;
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.35s, border-color 0.35s;
+}
+.photo:hover .photo__focusFrame {
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0% {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.35);
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+}

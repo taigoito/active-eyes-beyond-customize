@@ -16,3 +16,7 @@ new Book();
 // Evil Icons
 import EvilIcons from './_evilIcons.js';
 new EvilIcons();
+
+// Photos
+import Photos from './_photos.js';
+new Photos();
