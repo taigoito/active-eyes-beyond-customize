@@ -187,3 +187,15 @@
     }
   }
 }
+
+.tcd_co_data {
+  border-left: none;
+  border-right: none;
+
+  dt {
+    border-right: none;
+    background-color: transparent;
+    color: $themeColor;
+    font-weight: 700;
+  }
+}

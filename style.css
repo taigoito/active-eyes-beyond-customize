@@ -154,6 +154,17 @@
   }
 }
 
+.tcd_co_data {
+  border-left: none;
+  border-right: none;
+}
+.tcd_co_data dt {
+  border-right: none;
+  background-color: transparent;
+  color: #f441c9;
+  font-weight: 700;
+}
+
 /**
  * Icon
  */
@@ -403,6 +414,54 @@
 }
 #c-sitemap.c-sitemap ul {
   list-style-type: "- ";
+}
+
+#c-philosophy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  width: min(100%, 672px);
+}
+#c-philosophy .c-philosophy {
+  position: relative;
+  flex: 1 1 324px;
+  border: 1px solid #f441c9;
+}
+#c-philosophy .c-philosophy__num {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 54px;
+  height: 54px;
+  margin: 0;
+  padding: 0;
+  background-color: #f441c9;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+  line-height: 54px;
+}
+#c-philosophy .c-philosophy__image {
+  text-align: center;
+}
+#c-philosophy .c-philosophy__image img {
+  width: 144px;
+}
+#c-philosophy .c-philosophy p {
+  margin: 0;
+  padding: 6px 18px 12px;
+  line-height: 1.8;
+}
+#c-philosophy .c-philosophy p:not(.c-philosophy__lead) {
+  text-align: justify;
+}
+#c-philosophy .c-philosophy__lead {
+  color: #f441c9;
+  font-weight: 700;
+  text-align: center;
 }
 
 /**

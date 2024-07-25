@@ -259,3 +259,58 @@
     list-style-type: "- ";
   }
 }
+
+#c-philosophy {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  width: min(100%, 672px);
+
+  .c-philosophy {
+    position: relative;
+    flex: 1 1 324px;
+    border: 1px solid $themeColor;
+
+    &__num {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 54px;
+      height: 54px;
+      margin: 0;
+      padding: 0;
+      background-color: $themeColor;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 36px;
+      text-align: center;
+      line-height: 54px;
+    }
+
+    &__image {
+      text-align: center;
+
+      img {
+        width: 144px;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 6px 18px 12px;
+      line-height: 1.8;
+
+      &:not(.c-philosophy__lead) {
+        text-align: justify;
+      }
+    }
+
+    &__lead {
+      color: $themeColor;
+      font-weight: 700;
+      text-align: center;
+    }
+  }
+}
