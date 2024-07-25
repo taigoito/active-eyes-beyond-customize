@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Customize
  */
@@ -462,6 +463,104 @@
   color: #f441c9;
   font-weight: 700;
   text-align: center;
+}
+
+.contactItem {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 12px;
+}
+.contactItem__box {
+  flex: 0 1 288px;
+  padding: 36px 0;
+  border-radius: 18px;
+  background-color: #fde4f7;
+  font-weight: 700;
+}
+.contactItem__box:nth-child(1) p {
+  margin-bottom: 0;
+  line-height: 1.44;
+}
+.contactItem__box:nth-child(3) {
+  background-color: #ddf8e0;
+}
+.contactItem__box p {
+  margin-bottom: 12px;
+}
+
+#c-contactTableWrap {
+  width: min(100%, 864px);
+  margin: 0 auto;
+}
+#c-contactTableWrap > div > p {
+  margin-bottom: 12px;
+}
+
+#c-contactTable.c-contactTable th, #c-contactTable.c-contactTable td {
+  border: none;
+  vertical-align: middle;
+}
+#c-contactTable.c-contactTable td:nth-child(1) {
+  width: 30%;
+}
+#c-contactTable.c-contactTable td:nth-child(2) {
+  width: 70%;
+}
+@media (max-width: 899.9px) {
+  #c-contactTable.c-contactTable th, #c-contactTable.c-contactTable td {
+    display: block;
+    width: 100% !important;
+  }
+}
+#c-contactTable.c-contactTable input[type=text],
+#c-contactTable.c-contactTable input[type=email],
+#c-contactTable.c-contactTable select,
+#c-contactTable.c-contactTable textarea {
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #fde4f7;
+}
+#c-contactTable.c-contactTable input[type=text]:not(.your-tel),
+#c-contactTable.c-contactTable input[type=email],
+#c-contactTable.c-contactTable textarea {
+  width: 300px;
+}
+@media (min-width: 900px) {
+  #c-contactTable.c-contactTable input[type=text]:not(.your-tel),
+  #c-contactTable.c-contactTable input[type=email],
+  #c-contactTable.c-contactTable textarea {
+    width: 450px;
+  }
+}
+#c-contactTable.c-contactTable input[type=text].your-tel {
+  width: 90px;
+}
+#c-contactTable.c-contactTable td > label.required::before {
+  content: "必須";
+  width: 28px;
+  margin-right: 12px;
+  padding: 2px;
+  background-color: #f441c9;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.2;
+}
+#c-contactTable.c-contactTable td > label:not(.required)::before {
+  content: "任意";
+  width: 28px;
+  margin-right: 12px;
+  padding: 2px;
+  background-color: #666666;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  line-height: 1.2;
 }
 
 /**

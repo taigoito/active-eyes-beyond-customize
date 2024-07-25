@@ -314,3 +314,121 @@
     }
   }
 }
+
+.contactItem {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 12px;
+
+  &__box {
+    flex: 0 1 288px;
+    padding: 36px 0;
+    border-radius: 18px;
+    background-color: $themeColorLight;
+    font-weight: 700;
+
+    &:nth-child(1) {
+      p {
+        margin-bottom: 0;
+        line-height: 1.44;
+      }
+    }
+
+    &:nth-child(3) {
+      background-color: #ddf8e0; // LINE
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+  }
+}
+
+#c-contactTableWrap {
+  width: min(100%, 864px);
+  margin: 0 auto;
+
+  & > div > p {
+    margin-bottom: 12px;
+  }
+}
+
+#c-contactTable.c-contactTable {
+  th, td {
+    border: none;
+    vertical-align: middle;
+  }
+
+  td:nth-child(1) {
+    width: 30%;
+  }
+
+  td:nth-child(2) {
+    width: 70%;
+  }
+
+  @media (max-width: $breakpointMd - 0.1px) {
+    th, td {
+      display: block;
+      width: 100% !important;
+    }
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: $themeColorLight;
+  }
+
+  input[type="text"]:not(.your-tel),
+  input[type="email"],
+  textarea {
+    width: 300px;
+
+    @media (min-width: $breakpointMd) {
+      width: 450px;
+    }
+  }
+
+  input[type="text"].your-tel {
+    width: 90px;
+  }
+
+  td > label {
+    &.required {
+      &::before {
+        content: "必須";
+        width: 28px;
+        margin-right: 12px;
+        padding: 2px;
+        background-color: $themeColor;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
+
+    &:not(.required) {
+      &::before {
+        content: "任意";
+        width: 28px;
+        margin-right: 12px;
+        padding: 2px;
+        background-color: #666666;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 14px;
+        text-align: center;
+        line-height: 1.2;
+      }
+    }
+  }
+}
