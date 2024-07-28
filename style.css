@@ -51,6 +51,11 @@
   color: #f441c9;
 }
 
+.c-footerContent {
+  text-align: center;
+  line-height: 1.8;
+}
+
 #service_page_header .title {
   background-color: rgba(244, 65, 201, 0.5) !important;
 }

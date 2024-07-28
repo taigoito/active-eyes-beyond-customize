@@ -17,6 +17,10 @@ new Book();
 import EvilIcons from './_evilIcons.js';
 new EvilIcons();
 
+// Footer
+import Footer from './_footer.js';
+new Footer();
+
 // Photos
 import Photos from './_photos.js';
 new Photos();
