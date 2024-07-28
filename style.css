@@ -342,6 +342,29 @@
   text-align: center;
 }
 
+#c-report {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  gap: 24px;
+}
+#c-report .c-report {
+  flex: 1 1 288px;
+  padding: 48px 24px;
+  box-shadow: 6px 6px 12px 6px #dbdbdb;
+}
+#c-report .c-report__row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 24px 0;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+#c-report .c-report__row .photo {
+  flex: 0 1 75%;
+}
+
 #c-step {
   width: min(100%, 720px);
   margin: 0 auto;
@@ -918,7 +941,7 @@
 }
 .photo__image {
   display: block;
-  width: 432px;
+  width: 100%;
   height: auto;
   transition: transform 0.35s, filter 0.35s;
   filter: blur(1px) brightness(0.85);
