@@ -171,6 +171,26 @@
   font-weight: 700;
 }
 
+#drawer_menu {
+  width: 100% !important;
+}
+
+body.drawermenu_light #drawer_menu {
+  background: radial-gradient(rgba(255, 255, 255, 0.5), rgb(255, 255, 255)), url("/data/uploads/2024/07/06shozai_s.jpg") no-repeat 50% 50%/cover scroll !important;
+}
+
+body.drawermenu_light #mobile_menu li ul {
+  background-color: transparent !important;
+}
+
+body.drawermenu_light #mobile_menu a {
+  background: transparent !important;
+}
+
+body.drawermenu_light #mobile_menu li li a {
+  background: rgba(255, 255, 255, 0.3) !important;
+}
+
 /**
  * Icon
  */
