@@ -228,44 +228,59 @@ body.drawermenu_light #mobile_menu li li a {
  * Project
  */
 #c-reason.c-reason {
-  width: min(100%, 864px);
+  width: min(100%, 1024px);
   margin-left: auto;
   margin-right: auto;
 }
 #c-reason.c-reason .c-reason__list {
   list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+  height: 100vw;
   margin: 0;
-  padding: 0;
-  border-radius: 6px;
+  padding: min(8vw, 84px);
+  background: url("/data/plugins/beyond-customize/assets/frame_md.png") no-repeat 50% 50%/contain scroll;
+}
+@media (min-width: 900px) {
+  #c-reason.c-reason .c-reason__list {
+    width: 100%;
+    height: min(50vw, 540px);
+    background-image: url("/data/plugins/beyond-customize/assets/frame_lg.png");
+  }
 }
 #c-reason.c-reason .c-reason__item {
-  padding: 0.75em;
-  border-top: 1px solid #dbdbdb;
-  background-color: #f6f6f6;
-  font-weight: 700;
-  font-size: 0.875rem;
+  flex: 0 0 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  text-align: center;
 }
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   #c-reason.c-reason .c-reason__item {
-    font-size: min(2.88vw, 28px);
+    text-align: left;
   }
 }
-#c-reason.c-reason .c-reason__item strong {
-  display: none;
-  color: #f441c9;
+#c-reason.c-reason .c-reason__image {
+  flex: 0 1 36vw;
 }
-@media (min-width: 600px) {
-  #c-reason.c-reason .c-reason__item strong {
-    display: inline;
+@media (min-width: 900px) {
+  #c-reason.c-reason .c-reason__image {
+    flex-basis: min(16vw, 180px);
   }
 }
-#c-reason.c-reason .c-reason__item em {
-  padding: 0 0.375em;
-  color: #f441c9;
-  font-style: normal;
+#c-reason.c-reason .c-reason__text {
+  flex: 0 1 100%;
   font-weight: 700;
-  font-size: 1.5em;
-  vertical-align: middle;
+  font-size: 3.84vw;
+}
+@media (min-width: 900px) {
+  #c-reason.c-reason .c-reason__text {
+    flex-basis: min(48vw, 540px);
+    margin-left: 2vw;
+    font-size: min(2.4vw, 28px);
+  }
 }
 
 #c-plan.c-plan {
@@ -347,7 +362,7 @@ body.drawermenu_light #mobile_menu li li a {
 }
 #c-bannerArea.c-bannerArea .c-bannerArea__banner {
   position: relative;
-  flex: 0 1 432px;
+  flex: 0 1 288px;
 }
 #c-bannerArea.c-bannerArea .c-bannerArea__banner figcaption {
   position: absolute;
@@ -359,8 +374,12 @@ body.drawermenu_light #mobile_menu li li a {
   height: 1em;
   margin: auto;
   color: #ffffff;
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
+}
+#c-bannerArea.c-bannerArea .c-bannerArea__banner:nth-child(3) figcaption {
+  height: 2.4em;
+  line-height: 1.2;
 }
 
 #c-report {

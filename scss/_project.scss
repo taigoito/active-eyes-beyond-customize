@@ -3,45 +3,58 @@
  */
 
 #c-reason.c-reason {
-  width: min(100%, 864px);
+  width: min(100%, 1024px);
   margin-left: auto;
   margin-right: auto;
 
   .c-reason {
     &__list {
       list-style: none;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      width: 100%;
+      height: 100vw;
       margin: 0;
-      padding: 0;
-      border-radius: 6px;
+      padding: min(8vw, 84px);
+      background: url("/data/plugins/beyond-customize/assets/frame_md.png") no-repeat 50% 50% / contain scroll;
+
+      @media (min-width: $breakpointMd) {
+        width: 100%;
+        height: min(50vw, 540px);
+        background-image: url("/data/plugins/beyond-customize/assets/frame_lg.png");
+      }
     }
 
     &__item {
-      padding: 0.75em; // em指定
-      border-top: 1px solid #dbdbdb;
-      background-color: #f6f6f6;
+      flex: 0 0 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      text-align: center;
+      
+      @media (min-width: $breakpointMd) {
+        text-align: left;
+      }
+    }
+
+    &__image {
+      flex: 0 1 36vw;
+
+      @media (min-width: $breakpointMd) {
+        flex-basis: min(16vw, 180px);
+      }
+    }
+
+    &__text {
+      flex: 0 1 100%;
       font-weight: 700;
-      font-size: 0.875rem; // iPhoneSEで収まるサイズ
+      font-size: 3.84vw;
 
-      @media (min-width: $breakpointSm) {
-        font-size: min(2.88vw, 28px); // 600px時収まるサイズ
-      }
-
-      strong {
-        display: none;
-        color: $themeColor;
-
-        @media (min-width: $breakpointSm) {
-          display: inline;
-        }
-      }
-
-      em {
-        padding: 0 0.375em; // em指定
-        color: $themeColor;
-        font-style: normal;
-        font-weight: 700;
-        font-size: 1.5em; // em指定
-        vertical-align: middle;
+      @media (min-width: $breakpointMd) {
+        flex-basis: min(48vw, 540px);
+        margin-left: 2vw;
+        font-size: min(2.4vw, 28px);
       }
     }
   }
@@ -138,7 +151,7 @@
   .c-bannerArea {
     &__banner {
       position: relative;
-      flex: 0 1 432px; // 伸長しない
+      flex: 0 1 288px; // 伸長しない
 
       figcaption {
         position: absolute;
@@ -150,8 +163,13 @@
         height: 1em;
         margin: auto;
         color: #ffffff;
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
+      }
+
+      &:nth-child(3) figcaption {
+        height: 2.4em;
+        line-height: 1.2;
       }
     }
   }
