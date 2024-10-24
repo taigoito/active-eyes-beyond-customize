@@ -90,6 +90,23 @@
   height: 24px;
   background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center/contain scroll;
 }
+.post_content .c-check {
+  list-style: none;
+  margin-left: 40px;
+}
+.post_content .c-check li {
+  position: relative;
+}
+.post_content .c-check li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -32px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center/contain scroll;
+}
 .post_content .c-table th, .post_content .c-table td {
   border-left: none;
   border-right: none;
@@ -451,6 +468,11 @@ body.drawermenu_light #mobile_menu li li a {
 }
 #c-report .c-report__row .photo {
   flex: 0 1 75%;
+}
+
+#c-attention--sub {
+  width: min(100%, 720px);
+  margin: 0 auto;
 }
 
 #c-step {

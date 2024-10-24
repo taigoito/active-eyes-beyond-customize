@@ -110,6 +110,26 @@
     }
   }
 
+  .c-check {
+    list-style: none;
+    margin-left: 40px; // チェックアイコン
+
+    li {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -32px;
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("/data/plugins/beyond-customize/assets/icn_check.svg") no-repeat center center / contain scroll;
+      }
+    }
+  }
+
   .c-table {
     th, td {
       border-left: none;
