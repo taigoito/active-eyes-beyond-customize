@@ -14,14 +14,14 @@
       flex-flow: row wrap;
       align-items: center;
       width: 100%;
-      height: 100vw;
+      height: 175vw;
       margin: 0;
-      padding: min(8vw, 84px);
+      padding: min(6vw, 84px);
       background: url("/data/plugins/beyond-customize/assets/frame_md.png") no-repeat 50% 50% / contain scroll;
 
       @media (min-width: $breakpointMd) {
         width: 100%;
-        height: min(50vw, 540px);
+        height: min(60vw, 648px);
         background-image: url("/data/plugins/beyond-customize/assets/frame_lg.png");
       }
     }
@@ -42,7 +42,7 @@
       flex: 0 1 36vw;
 
       @media (min-width: $breakpointMd) {
-        flex-basis: min(16vw, 180px);
+        flex-basis: min(12vw, 144px);
       }
     }
 
@@ -50,13 +50,60 @@
       flex: 0 1 100%;
       font-weight: 700;
       font-size: 3.84vw;
+      line-height: 1.4;
+
+      @at-root .c-reason__item:nth-child(1) br {
+        display: none;
+      }
 
       @media (min-width: $breakpointMd) {
-        flex-basis: min(48vw, 540px);
-        margin-left: 2vw;
-        font-size: min(2.4vw, 28px);
+        flex-basis: min(48vw, 576px);
+        margin-left: min(2vw, 24px);
+        padding-top: min(1vw, 12px);
+        font-size: min(1.8vw, 21px);
+
+        @at-root .c-reason__item:nth-child(1) br {
+          display: inline;
+        }
+      }
+
+      small {
+        font-size: 75%;
       }
     }
+  }
+}
+
+#c-attention.c-attention {
+  width: 100%;
+  padding: 48px 0 96px;
+  background: url("/data/uploads/attention-bg_md.jpg") no-repeat center center / cover scroll;
+
+  @media (min-width: $breakpointMd) {
+    background-image: url("/data/uploads/attention-bg_lg-scaled.jpg");
+  }
+
+  .c-attention {
+    &__image {
+      display: block;
+      width: min(90vw, 648px);
+      margin: 24px auto;
+    }
+
+    &__heading, &__text {
+      width: min(90vw, 648px);
+      margin: 24px auto;
+      color: #ffffff;
+    }
+
+    &__heading {
+      font-size: 1.17em;
+      text-align: center;
+    }
+  }
+
+  .link_button {
+    margin-top: 24px;
   }
 }
 
@@ -134,6 +181,17 @@
         width: 396px;
         height: 475px;
       }
+    }
+  }
+}
+
+#c-snsArea.c-snsArea {
+  margin-bottom: 48px;
+  text-align: center;
+
+  .c-snsArea {
+    &__instagram {
+      width: 60px;
     }
   }
 }
