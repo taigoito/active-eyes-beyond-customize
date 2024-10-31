@@ -49,22 +49,14 @@
     &__text {
       flex: 0 1 100%;
       font-weight: 700;
-      font-size: 3.84vw;
+      font-size: 3.6vw;
       line-height: 1.4;
-
-      @at-root .c-reason__item:nth-child(1) br {
-        display: none;
-      }
 
       @media (min-width: $breakpointMd) {
         flex-basis: min(48vw, 576px);
         margin-left: min(2vw, 24px);
         padding-top: min(1vw, 12px);
         font-size: min(1.8vw, 21px);
-
-        @at-root .c-reason__item:nth-child(1) br {
-          display: inline;
-        }
       }
 
       small {

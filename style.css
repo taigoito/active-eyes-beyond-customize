@@ -20,7 +20,12 @@
 }
 
 #cb_content_9.cb_free_space.num9 {
-  background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat center center/cover scroll;
+  background: url("/data/uploads/tp08_md.jpg") no-repeat 50% 50%/cover scroll;
+}
+@media (min-width: 900px) {
+  #cb_content_9.cb_free_space.num9 {
+    background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat 50% 50%/cover scroll;
+  }
 }
 #cb_content_9.cb_free_space.num9 .catch.common_catch {
   color: #ffffff;
@@ -55,6 +60,17 @@
 .c-footerContent {
   text-align: center;
   line-height: 1.8;
+}
+.c-footerContent__click {
+  padding: 4px 6px 3px;
+  border: 1px solid #f441c9;
+  background-color: #ffffff;
+  color: #f441c9 !important;
+  transition: all 0.25s ease-in-out;
+}
+.c-footerContent__click:hover {
+  background-color: #f441c9;
+  color: #ffffff !important;
 }
 
 #service_page_header .title {
@@ -290,22 +306,15 @@ body.drawermenu_light #mobile_menu li li a {
 #c-reason.c-reason .c-reason__text {
   flex: 0 1 100%;
   font-weight: 700;
-  font-size: 3.84vw;
+  font-size: 3.6vw;
   line-height: 1.4;
 }
-.c-reason__item:nth-child(1) br {
-  display: none;
-}
-
 @media (min-width: 900px) {
   #c-reason.c-reason .c-reason__text {
     flex-basis: min(48vw, 576px);
     margin-left: min(2vw, 24px);
     padding-top: min(1vw, 12px);
     font-size: min(1.8vw, 21px);
-  }
-  .c-reason__item:nth-child(1) br {
-    display: inline;
   }
 }
 #c-reason.c-reason .c-reason__text small {

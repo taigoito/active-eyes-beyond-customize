@@ -22,7 +22,11 @@
 }
 
 #cb_content_9.cb_free_space.num9 {
-  background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat center center / cover scroll;
+  background: url("/data/uploads/tp08_md.jpg") no-repeat 50% 50% / cover scroll;
+
+  @media (min-width: $breakpointMd) {
+    background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat 50% 50% / cover scroll;
+  }
 
   .catch.common_catch {
     color: #ffffff;
@@ -70,6 +74,19 @@
 .c-footerContent {
   text-align: center;
   line-height: 1.8;
+
+  &__click {
+    padding: 4px 6px 3px;
+    border: 1px solid $themeColor;
+    background-color: #ffffff;
+    color: $themeColor !important; // 会社概要に対応のため
+    transition: all 0.25s ease-in-out;
+
+    &:hover {
+      background-color: $themeColor;
+      color: #ffffff !important;
+    }
+  }
 }
 
 #service_page_header .title {
