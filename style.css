@@ -984,22 +984,28 @@ body.drawermenu_light #mobile_menu li li a {
   z-index: 10;
   width: 50%;
   height: 100%;
+  overflow: hidden;
 }
 .book__content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  position: relative;
+  width: min(60vw, 360px);
   height: 100%;
+  background-color: #ffffff;
 }
-[data-index="1"] .book__content {
-  background-color: #ff8;
+.book__content h2 {
+  font-size: min(3.75vw, 22.5px);
 }
-[data-index="2"] .book__content {
-  background-color: #8ff;
+.book__content p {
+  margin: 0;
+  font-size: min(2vw, 12px);
 }
-[data-index="3"] .book__content {
-  background-color: #f8f;
+.book__pageNum {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: min(2.5vw, 30px);
+  margin: auto;
+  text-align: center;
 }
 .book__canvas {
   position: absolute;
@@ -1039,7 +1045,7 @@ body.drawermenu_light #mobile_menu li li a {
 }
 @media (min-width: 900px) {
   .book__prev {
-    left: 27.5vw;
+    left: 330px;
   }
 }
 .book__next {
@@ -1047,7 +1053,7 @@ body.drawermenu_light #mobile_menu li li a {
 }
 @media (min-width: 900px) {
   .book__next {
-    right: 27.5vw;
+    right: 330px;
   }
 }
 

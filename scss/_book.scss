@@ -49,26 +49,45 @@ $linkHoverColor: #85c2e0;
     z-index: 10;
     width: 50%;
     height: 100%;
+    overflow: hidden;
   }
 
   &__content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    position: relative;
+    width: min($unit * 2, $unitLg);
     height: 100%;
+    //padding: min($unit / 4, $unitLg / 8) min($unit / 6, $unitLg / 12);
+    background-color: #ffffff;
 
-    [data-index="1"] & {
-      background-color: #ff8;
+    .book__page:nth-child(3n+1) & {
+      //background-color: #ff8;
     }
 
-    [data-index="2"] & {
-      background-color: #8ff;
+    .book__page:nth-child(3n-1) & {
+      //background-color: #8ff;
     }
 
-    [data-index="3"] & {
-      background-color: #f8f;
+    .book__page:nth-child(3n) & {
+      //background-color: #f8f;
     }
+
+    h2 {
+      font-size: min($unit / 8, $unitLg / 16);
+    }
+    
+    p {
+      margin: 0;
+      font-size: min($unit / 15, $unitLg / 30);
+    }
+  }
+
+  &__pageNum {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: min($unit / 12, $unitLg / 12);
+    margin: auto;
+    text-align: center;
   }
 
   &__canvas {
@@ -110,7 +129,7 @@ $linkHoverColor: #85c2e0;
     left: min($unit / 6, $unitMd / 6);
 
     @media (min-width: $breakpointMd) {
-      left: $unit * 11 / 12;
+      left: $unitLg * 11 / 12;
     }
   }
 
@@ -118,7 +137,7 @@ $linkHoverColor: #85c2e0;
     right: min($unit / 6, $unitMd / 6);
 
     @media (min-width: $breakpointMd) {
-      right: $unit * 11 / 12;
+      right: $unitLg * 11 / 12;
     }
   }
 }
