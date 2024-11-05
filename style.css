@@ -459,24 +459,30 @@ body.drawermenu_light #mobile_menu li li a {
 #c-report {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 24px;
 }
 #c-report .c-report {
-  flex: 1 1 288px;
-  padding: 48px 24px;
-  box-shadow: 6px 6px 12px 6px #dbdbdb;
-}
-#c-report .c-report__row {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
-  padding: 24px 0;
-  border-top: 1px solid #dbdbdb;
-  border-bottom: 1px solid #dbdbdb;
+  justify-content: space-between;
+  gap: 12px;
+  flex: 0 1 400px;
+  padding: 36px;
+  box-shadow: 6px 6px 12px 6px #dbdbdb;
 }
-#c-report .c-report__row .photo {
-  flex: 0 1 75%;
+#c-report .c-report .photo.--sm {
+  flex: 0 1 47.5%;
+}
+#c-report .c-report .photo.--lg {
+  flex: 0 1 100%;
+}
+#c-report .c-report__desc {
+  width: 100%;
+  margin: 0;
+  font-size: 75%;
+  line-height: 1;
+  text-align: left;
 }
 
 #c-attention--sub {
@@ -1090,6 +1096,23 @@ body.drawermenu_light #mobile_menu li li a {
 .photo:hover .photo__focusFrame {
   opacity: 1;
   animation: blink 1s infinite;
+}
+.photo__tooltip {
+  position: absolute;
+  right: 6px;
+  bottom: 12px;
+  margin: 0;
+  padding: 6px 9px;
+  border: 1px solid #808080;
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333333;
+  font-size: min(2.52vw, 75%);
+  line-height: 1.44 !important;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+.photo:hover .photo__tooltip {
+  opacity: 1;
 }
 
 @keyframes blink {

@@ -228,25 +228,32 @@
 #c-report {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 24px;
 
   .c-report {
-    flex: 1 1 288px;
-    padding: 48px 24px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    gap: 12px;
+    flex: 0 1 400px;
+    padding: 36px;
     box-shadow: 6px 6px 12px 6px #dbdbdb;
 
-    &__row {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      padding: 24px 0;
-      border-top: 1px solid #dbdbdb;
-      border-bottom: 1px solid #dbdbdb;
+    .photo.--sm {
+      flex: 0 1 47.5%;
+    }
 
-      .photo {
-        flex: 0 1 75%;
-      }
+    .photo.--lg {
+      flex: 0 1 100%;
+    }
+
+    &__desc {
+      width: 100%;
+      margin: 0;
+      font-size: 75%;
+      line-height: 1;
+      text-align: left;
     }
   }
 }
