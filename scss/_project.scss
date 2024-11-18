@@ -366,6 +366,14 @@
   }
 }
 
+.c-greeting__bg {
+  background: url("/data/uploads/daihyou_haikeiSP.jpg") no-repeat center center / contain scroll;
+
+  @media (min-width: $breakpointSm) {
+    background-image: url("/data/uploads/daihyou_haikeiPC.jpg");
+  }
+}
+
 #c-philosophy {
   display: flex;
   flex-flow: row wrap;

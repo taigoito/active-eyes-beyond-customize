@@ -99,7 +99,7 @@
 .post_content .c-designList li::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 6px;
   left: -32px;
   display: block;
   width: 24px;
@@ -116,7 +116,7 @@
 .post_content .c-check li::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 6px;
   left: -32px;
   display: block;
   width: 24px;
@@ -198,11 +198,29 @@
   border-left: none;
   border-right: none;
 }
+@media (max-width: 750px) {
+  .tcd_co_data {
+    font-size: 14px;
+  }
+}
 .tcd_co_data dt {
+  justify-content: flex-start;
   border-right: none;
   background-color: transparent;
   color: #f441c9;
   font-weight: 700;
+}
+@media (max-width: 750px) {
+  .tcd_co_data dt {
+    width: 100px;
+    padding: 20px 10px;
+  }
+}
+@media (max-width: 750px) {
+  .tcd_co_data dd {
+    width: calc(100% - 100px);
+    padding: 20px 10px;
+  }
 }
 
 #drawer_menu {
@@ -568,6 +586,15 @@ body.drawermenu_light #mobile_menu li li a {
 }
 #c-sitemap.c-sitemap ul {
   list-style-type: "- ";
+}
+
+.c-greeting__bg {
+  background: url("/data/uploads/daihyou_haikeiSP.jpg") no-repeat center center/contain scroll;
+}
+@media (min-width: 600px) {
+  .c-greeting__bg {
+    background-image: url("/data/uploads/daihyou_haikeiPC.jpg");
+  }
 }
 
 #c-philosophy {
