@@ -19,12 +19,16 @@
   color: #ffffff;
 }
 
+#cb_content_3.cb_free_space.num3 {
+  background: repeating-linear-gradient(135deg, #fde4f7, #fde4f7 12px, #fff 12px, #fff 24px);
+}
+
 #cb_content_9.cb_free_space.num9 {
   background: url("/data/uploads/tp08_md.jpg") no-repeat 50% 50%/cover scroll;
 }
 @media (min-width: 900px) {
   #cb_content_9.cb_free_space.num9 {
-    background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat 50% 50%/cover scroll;
+    background: url("/data/uploads/tp08-scaled.jpg") no-repeat 50% 50%/cover scroll;
   }
 }
 #cb_content_9.cb_free_space.num9 .catch.common_catch {
@@ -228,7 +232,7 @@
 }
 
 body.drawermenu_light #drawer_menu {
-  background: url("/data/uploads/menuC.jpg") no-repeat 50% 50%/cover scroll !important;
+  background: url("/data/uploads/drawerMenu-bg_tr.jpg") no-repeat 50% 50%/cover scroll !important;
 }
 
 body.drawermenu_light #mobile_menu li ul {
@@ -342,7 +346,7 @@ body.drawermenu_light #mobile_menu li li a {
 #c-attention.c-attention {
   width: 100%;
   padding: 48px 0 96px;
-  background: url("/data/uploads/attention-bg_md.jpg") no-repeat center center/cover scroll;
+  background: url("/data/uploads/attention-bg_md.jpg") no-repeat 100% 0%/cover scroll;
 }
 @media (min-width: 900px) {
   #c-attention.c-attention {

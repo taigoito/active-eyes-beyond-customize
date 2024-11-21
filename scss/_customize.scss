@@ -21,11 +21,15 @@
   }
 }
 
+#cb_content_3.cb_free_space.num3 {
+  background: repeating-linear-gradient(135deg, #fde4f7, #fde4f7 12px, #fff 12px, #fff 24px);
+}
+
 #cb_content_9.cb_free_space.num9 {
   background: url("/data/uploads/tp08_md.jpg") no-repeat 50% 50% / cover scroll;
 
   @media (min-width: $breakpointMd) {
-    background: url("/data/uploads/2024/07/tp08-scaled.jpg") no-repeat 50% 50% / cover scroll;
+    background: url("/data/uploads/tp08-scaled.jpg") no-repeat 50% 50% / cover scroll;
   }
 
   .catch.common_catch {
@@ -265,7 +269,7 @@
 }
 
 body.drawermenu_light #drawer_menu {
-  background: url("/data/uploads/menuC.jpg") no-repeat 50% 50% / cover scroll !important;
+  background: url("/data/uploads/drawerMenu-bg_tr.jpg") no-repeat 50% 50% / cover scroll !important;
 }
 
 body.drawermenu_light #mobile_menu li ul {
