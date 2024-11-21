@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.94 40.77">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #f441c9;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_2-2" data-name="レイヤー_2">
+    <g>
+      <line class="cls-1" x1="19.97" x2="19.97" y2="36"/>
+      <polyline class="cls-1" points="37.47 18.33 19.97 35.82 2.47 18.33"/>
+    </g>
+  </g>
+</svg>

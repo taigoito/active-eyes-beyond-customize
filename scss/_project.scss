@@ -225,6 +225,61 @@
   }
 }
 
+.c-featureHead {
+  position: relative;
+  min-height: 6rem;
+  padding: 1.5rem 0;
+
+  &__cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: url("/data/uploads/ae_orange_logo.jpg") no-repeat 50% 50% / contain scroll;
+    opacity: 0.35;
+  }
+
+  span {
+    display: inline-block;
+  }  
+}
+
+.c-featureGroup {
+  width: calc(100% + 40px);
+  height: 112vw;
+  margin: 0 -20px;
+  padding: clamp(31.5px, 6vw, 84px);
+  background: url("/data/plugins/beyond-customize/assets/frame2_md.jpg") no-repeat 50% 50% / contain scroll;
+  font-size: 3.36vw;
+
+  .c-featureGroup__img {
+    max-width: 180px;
+    margin: auto;
+  }
+
+  .c-featureGroup__h2 {
+    font-size: 4.2vw;
+  }
+
+  @media (min-width: $breakpointMd) {
+    width: 100%;
+    height: min(50vw, 540px);
+    margin: 0;
+    background-image: url("/data/plugins/beyond-customize/assets/frame2_lg.jpg");
+    font-size: 1rem;
+
+    .c-featureGroup__img {
+      max-width: 240px;
+    }
+  
+    .c-featureGroup__h2 {
+      font-size: 1.25rem;
+    }
+  }
+}
+
 #c-report {
   display: flex;
   flex-flow: row wrap;
@@ -269,22 +324,34 @@
 
   .c-step {
     position: relative;
-    width: min(87.5%, 630px);
-    margin-left: 12.5%;
-    padding-left: 18.75%;
+    padding-top: 36px;
+    padding-left: 31.5%;
     padding-right: 6.25%;
     padding-bottom: 36px;
-    border-left: 1px dashed $themeColor;
+    margin-bottom: 48px;
+    border: 1px solid $themeColor;
+    border-radius: 6px;
     text-align: justify;
 
-    &:last-child {
-      border-left: none;
+    &::after {
+      content: url("/data/plugins/beyond-customize/assets/step_arrow.svg");
+      position: absolute;
+      top: calc(100% + 6px);
+      left: 0;
+      right: 0;
+      width: 36px;
+      height: 36px;
+      margin: auto;
+    }
+
+    &:last-child::after {
+      content: "";
     }
 
     &__image {
       position: absolute;
-      top: 0;
-      right: calc(100% - min(12.5%, 60px));
+      top: 36px;
+      right: calc(100% - min(30%, 180px));
       width: min(25%, 120px);
 
       img {
