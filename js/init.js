@@ -21,6 +21,10 @@ new EvilIcons();
 import Footer from './_footer.js';
 new Footer();
 
+// Movie
+import Movie from './_movie.js';
+new Movie();
+
 // Photos
 import Photos from './_photos.js';
 new Photos();

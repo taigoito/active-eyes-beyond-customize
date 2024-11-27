@@ -17,12 +17,12 @@
       height: 175vw;
       margin: 0;
       padding: min(6vw, 84px);
-      background: url("/data/plugins/beyond-customize/assets/frame_md.png") no-repeat 50% 50% / contain scroll;
+      background: url("/data/plugins/beyond-customize/assets/frame1_md.jpg") no-repeat 50% 50% / contain scroll;
 
       @media (min-width: $breakpointMd) {
         width: 100%;
         height: min(60vw, 648px);
-        background-image: url("/data/plugins/beyond-customize/assets/frame_lg.png");
+        background-image: url("/data/plugins/beyond-customize/assets/frame1_lg.jpg");
       }
     }
 
@@ -239,6 +239,15 @@
     height: 100%;
     background: url("/data/uploads/ae_orange_logo.jpg") no-repeat 50% 50% / contain scroll;
     opacity: 0.35;
+  }
+
+  @media (max-width: $breakpointMd - 0.1) {
+    padding-top: 9rem;
+
+    &__cover {
+      height: calc(100% - 9rem);
+      opacity: 1;
+    }
   }
 
   span {

@@ -25,11 +25,18 @@
   background: repeating-linear-gradient(135deg, #fde4f7, #fde4f7 12px, #fff 12px, #fff 24px);
 }
 
+#c-myVideo {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto 30px;
+}
+
 #cb_content_9.cb_free_space.num9 {
   background: url("/data/uploads/tp08_md.jpg") no-repeat 50% 50% / cover scroll;
 
   @media (min-width: $breakpointMd) {
-    background: url("/data/uploads/tp08-scaled.jpg") no-repeat 50% 50% / cover scroll;
+    background: url("/data/uploads/tp08_lg-scaled.jpg") no-repeat 50% 50% / cover scroll;
   }
 
   .catch.common_catch {
