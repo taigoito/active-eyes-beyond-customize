@@ -505,6 +505,46 @@
   }
 }
 
+#c-fukuiGroup {
+  // 幅:1000px gap:0.5em
+  .c-fukuiGroup {
+    align-items: stretch;
+    gap: 0;
+
+    &__image {
+      flex: 0 1 384px;
+      margin-bottom: 30px;
+    }
+
+    &__content {
+      position: relative;
+      flex: 0 1 576px;
+      margin: 45px 0;
+      padding: 15px 0 15px 30px;
+      border-left: 1px solid $themeColor;
+
+      h3 {
+        position: absolute;
+        top: -45px;
+        left: 0;
+        margin: 0;
+        color: $themeColor;
+        font-size: 30px;
+        line-height: 1;
+      }
+
+      h4 {
+        margin: 0 0 15px;
+        font-size: 24px;
+      }
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+}
+
 .contactItem {
   display: flex;
   flex-flow: row wrap;

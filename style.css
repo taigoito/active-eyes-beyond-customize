@@ -713,6 +713,38 @@ body.drawermenu_light #mobile_menu li li a {
   text-align: center;
 }
 
+#c-fukuiGroup .c-fukuiGroup {
+  align-items: stretch;
+  gap: 0;
+}
+#c-fukuiGroup .c-fukuiGroup__image {
+  flex: 0 1 384px;
+  margin-bottom: 30px;
+}
+#c-fukuiGroup .c-fukuiGroup__content {
+  position: relative;
+  flex: 0 1 576px;
+  margin: 45px 0;
+  padding: 15px 0 15px 30px;
+  border-left: 1px solid #f441c9;
+}
+#c-fukuiGroup .c-fukuiGroup__content h3 {
+  position: absolute;
+  top: -45px;
+  left: 0;
+  margin: 0;
+  color: #f441c9;
+  font-size: 30px;
+  line-height: 1;
+}
+#c-fukuiGroup .c-fukuiGroup__content h4 {
+  margin: 0 0 15px;
+  font-size: 24px;
+}
+#c-fukuiGroup .c-fukuiGroup__content p {
+  line-height: 2;
+}
+
 .contactItem {
   display: flex;
   flex-flow: row wrap;
