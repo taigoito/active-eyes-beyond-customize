@@ -6,12 +6,12 @@
 
 export default class Photos {
   constructor() {
-    const photos = document.querySelectorAll('.photo');
+    const photos = document.querySelectorAll('.myphoto');
     if (!photos || !photos.length) return;
 
     photos.forEach(elem => {
       elem.addEventListener('mousemove', (event) => {
-        const image = elem.querySelector('.photo__image');
+        const image = elem.querySelector('.myphoto__image');
         image.style.transform = '';
         if ('ontouchstart' in document.documentElement || navigator.maxTouchPoints > 0) {
           image.style.transformOrigin = `50% 50%`;
@@ -24,7 +24,7 @@ export default class Photos {
       });
 
       elem.addEventListener('mouseleave', () => {
-        const image = elem.querySelector('.photo__image');
+        const image = elem.querySelector('.myphoto__image');
         image.style.transform = 'scale(1)';
       });
     });

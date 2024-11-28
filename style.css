@@ -546,10 +546,10 @@ body.drawermenu_light #mobile_menu li li a {
   padding: 36px;
   box-shadow: 6px 6px 12px 6px #dbdbdb;
 }
-#c-report .c-report .photo.--sm {
+#c-report .c-report .myphoto.--sm {
   flex: 0 1 47.5%;
 }
-#c-report .c-report .photo.--lg {
+#c-report .c-report .myphoto.--lg {
   flex: 0 1 100%;
 }
 #c-report .c-report__desc {
@@ -1193,22 +1193,27 @@ body.drawermenu_light #mobile_menu li li a {
 /**
  * Photos
  */
-.photo {
+.myphoto {
   position: relative;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  aspect-ratio: 16/9;
   overflow: hidden;
 }
-.photo__image {
+.myphoto__image {
   display: block;
   width: 100%;
   height: auto;
+  aspect-ratio: 16/9;
   transition: transform 0.35s, filter 0.35s;
   filter: blur(1px) brightness(0.85);
 }
-.photo:hover .photo__image {
+.myphoto:hover .myphoto__image {
   transform: scale(1.2);
   filter: brightness(1);
 }
-.photo__focusFrame {
+.myphoto__focusFrame {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1220,11 +1225,11 @@ body.drawermenu_light #mobile_menu li li a {
   opacity: 0;
   transition: opacity 0.35s, border-color 0.35s;
 }
-.photo:hover .photo__focusFrame {
+.myphoto:hover .myphoto__focusFrame {
   opacity: 1;
   animation: blink 1s infinite;
 }
-.photo__tooltip {
+.myphoto__tooltip {
   position: absolute;
   right: 6px;
   bottom: 12px;
@@ -1238,7 +1243,7 @@ body.drawermenu_light #mobile_menu li li a {
   opacity: 0;
   transition: opacity 0.35s ease-in-out;
 }
-.photo:hover .photo__tooltip {
+.myphoto:hover .myphoto__tooltip {
   opacity: 1;
 }
 
