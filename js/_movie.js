@@ -13,8 +13,6 @@ export default class Movie {
     if (!section || !heading || !desc || !myVideo) return
 
     myVideo.after(desc);
-    const text = heading.textContent;
-    heading.innerHTML = `<a href="#cb_content_12" style="color: #f441c9">${text}</a>`
 
   }
 }
