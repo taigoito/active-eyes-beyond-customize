@@ -4,7 +4,6 @@
 
 #index_header_content .catch {
   color: #000;
-  font-family: "Times New Roman" , "游明朝" , "Yu Mincho" , "游明朝体" , "YuMincho" , "ヒラギノ明朝 Pro W3" , "Hiragino Mincho Pro" , "HiraMinProN-W3" , "HGS明朝E" , "ＭＳ Ｐ明朝" , "MS PMincho" , serif;
   text-shadow: 2px 2px 6px #fff, -2px 2px 6px #fff, 2px -2px 6px #fff, -2px -2px 6px #fff;
 }
 
@@ -49,6 +48,7 @@
 
     p {
       color: #ffffff;
+      font-size: min(3.6vw, 18px);
     }
   }
 }
@@ -186,6 +186,13 @@
     .wp-block-button__link {
       width: 100%;
     }
+  }
+
+  p.--withArrow::after {
+    content: url("/data/plugins/beyond-customize/assets/step_arrow.svg");
+    display: block;
+    width: 1.5rem;
+    margin: auto;
   }
 }
 
