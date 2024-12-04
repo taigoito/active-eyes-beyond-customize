@@ -47,6 +47,7 @@
 }
 #cb_content_9.cb_free_space.num9 .post_content p {
   color: #ffffff;
+  font-size: min(3.84vw, 18px);
 }
 
 #footer_box_content .item:nth-child(3) .design_button {
@@ -155,6 +156,12 @@
 }
 .post_content .wp-block-button .wp-block-button__link {
   width: 100%;
+}
+.post_content p.--withArrow::after {
+  content: url("/data/plugins/beyond-customize/assets/step_arrow.svg");
+  display: block;
+  width: 1.5rem;
+  margin: auto;
 }
 
 .page-id-62 #container {

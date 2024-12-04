@@ -49,6 +49,7 @@
 
     p {
       color: #ffffff;
+      font-size: min(3.84vw, 18px);
     }
   }
 }
@@ -186,6 +187,13 @@
     .wp-block-button__link {
       width: 100%;
     }
+  }
+
+  p.--withArrow::after {
+    content: url("/data/plugins/beyond-customize/assets/step_arrow.svg");
+    display: block;
+    width: 1.5rem;
+    margin: auto;
   }
 }
 
